@@ -1,0 +1,462 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body,html {
+    font-size: 15pt;
+    font-family: 'Roboto', sans-serif;
+    
+  background-image: url("Images/Being.jpg");
+  width: 100%;
+  height:  100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  
+}
+.gridContainer {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+  grid-template-areas: 'content1 content1 content1 content1 content1 content1'
+  'content2 content2 content2 content2 content2 content2'
+  'content3 content3 content3 content3 content3 content3';
+ 
+
+}
+
+.content1{
+  grid-area: content1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+ 
+  
+  
+}
+.content2{
+  grid-area: content2;
+  padding: 10px 100px 10px 100px;
+  
+ 
+  
+  
+}
+.content3{
+  grid-area: content3;
+ 
+  display: flex;
+  flex-direction: column;
+  
+  padding: 5px 40px 5px 40px;
+}
+
+ 
+ 
+ 
+
+li {
+  list-style: none;
+  
+}
+
+
+
+ li {
+   
+  margin-left: 5rem;
+}
+/* desktop site*/
+
+ul {
+        position: absolute ;
+        left: -100%;
+        top: 10%;
+        color: black;
+        background-color: white;
+        width: 50%;
+        height: 55%;
+        padding: 50px 20px 50px 20px;
+        
+        border-radius: 7px;
+        text-align: center;
+        transition: 0.3s;
+        flex-direction: column;
+        z-index: 10;
+        
+        
+        
+    }
+   
+
+ul.active {
+  left: 0; 
+}
+
+button.active {
+  left: 0; 
+}
+.emptyVal.active {
+  left: 0; 
+}
+
+.myLi{
+
+  width:100%;
+  padding: 20px 20px 55px 10px;
+  
+  margin: 20px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+ color: white;
+ border: 2px solid white ;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+    
+  
+  }
+ 
+ 
+
+.hamburger {
+  
+
+   cursor: pointer;
+   text-align: center;
+   background-color: red;
+   color: white;
+   border-radius: 4px;
+   padding: 20px 0 20px 0;
+   margin-top: 20px;
+   font-weight: bold;
+   font-size: 20pt;
+   width: 300px;
+   height: 70px;
+   
+   
+   }
+   .btnTip{
+   cursor: pointer;
+   display: block;
+   background-color: seagreen;
+   color: white;
+   border: none;
+   border-radius: 4px;
+   padding: 20px 0 20px 0;
+   margin-top: 20px;
+   font-weight: bold;
+   font-size: 20pt;
+   width: 300px;
+   height: 70px;
+   text-align: center;
+   
+     
+   }
+    .btnTip:hover {
+      background-color: black;
+    }
+   .btn {
+    
+     cursor: pointer;
+     border: none;
+     border-radius: 5px;
+     background-color: #D756ED;
+     color: white;
+     padding: 16px 35px;
+     margin-bottom: 20px;
+     font-family: 'Roboto', sans-serif;
+     text-transform: uppercase;
+   }
+   .hamburger1 {
+     display: block;
+     cursor: pointer;
+   
+   }
+   .btnClose{
+    position: absolute;
+   
+     right: 180px;
+  
+     background-image: linear-gradient(to right, #e52d27,#b31217);
+     color: white;
+     padding: 6px 12px 6px 12px;
+     text-decoration: none;
+     display: inline-block;
+     border: none;
+     border-radius: 5px;
+     font-weight: bold;
+     font-size: 12pt;
+    font-family: 'Roboto', sans-serif;
+    
+   }
+   h4{
+    
+     font-family: 'Roboto', sans-serif;
+     color: black;
+     margin-top: 10px;
+   }
+
+
+::placeholder{
+  color: lightgray;
+}
+.hora{
+  
+  border: 1px solid lightgray;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+ 
+}
+.form-control{
+  
+  width: 400px;
+  height: auto;
+  
+}
+
+.text{
+  position: absolute;
+  top: 44%;
+  padding: 50px 0 50px 0;
+}
+.emptyVal{
+  background-color: lightcoral;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18pt;
+  border-radius: 5px;
+  margin: 100px 0;
+  
+}
+
+ 
+@media only screen and (max-width: 600px) {
+  
+  .gridContainer {
+  display: grid;
+  grid-template-rows: 0.2fr ;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+  grid-template-areas: 'content1 content1 content1 content1 content1 content1'
+  'content2 content2 content2 content2 content2 content2'
+  'content3 content3 content3 content3 content3 content3';
+
+ 
+
+}
+
+.content1{
+  grid-area: content1;
+  display: flex;
+  flex-direction: column;
+
+
+ 
+  
+  
+}
+.content2{
+  grid-area: content2;
+  padding: 5px 10px 5px 10px;
+
+  
+  
+ 
+  
+  
+}
+.content3{
+  grid-area: content3;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+ 
+}
+
+ 
+    ul {
+        position: absolute ;
+        left: -100%;
+        top: 0;
+        color: black;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        padding: 10px 100px 10px 100px;
+        
+        border-radius: 7px;
+        text-align: center;
+        transition: 0.3s;
+        flex-direction: column;
+        z-index: 10;
+        
+        
+        
+    }
+   
+
+ul.active {
+  left: 0; 
+}
+
+button.active {
+  left: 0; 
+}
+.emptyVal.active {
+  left: 0; 
+}
+
+.myLi{
+
+  width:100%;
+  padding: 20px 20px 55px 10px;
+  display: inline-block;
+  margin: 20px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+ color: white;
+ border: 2px solid white ;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+    
+  
+  }
+ 
+ 
+
+.hamburger {
+  
+
+   cursor: pointer;
+   text-align: center;
+   background-color: red;
+   color: white;
+   border-radius: 4px;
+   padding: 10px 0 10px 0;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   
+   font-weight: bold;
+   
+   
+   
+   }
+  
+   .btnTip{
+   cursor: pointer;
+   display: block;
+   background-color: seagreen;
+   color: white;
+   border: none;
+   border-radius: 4px;
+   padding: 10px 0 10px 0;
+   font-weight: bold;
+   font-size: 20pt;
+   
+   
+   
+     
+   }
+   .btnTip:hover{
+     background-color: black;
+   }
+   .btn {
+    
+     cursor: pointer;
+     border: none;
+     border-radius: 5px;
+     background-color: #D756ED;
+     color: white;
+     padding: 16px 35px;
+     margin-bottom: 20px;
+     font-family: 'Roboto', sans-serif;
+     text-transform: uppercase;
+   }
+   .hamburger1 {
+     display: block;
+     cursor: pointer;
+   
+   }
+   .btnClose{
+    position: absolute;
+   
+     right: 30px;
+  
+     background-image: linear-gradient(to right, #e52d27,#b31217);
+     color: white;
+     padding: 6px 12px 6px 12px;
+     text-decoration: none;
+     display: inline-block;
+     border: none;
+     border-radius: 5px;
+     font-weight: bold;
+     font-size: 12pt;
+    font-family: 'Roboto', sans-serif;
+    
+   }
+   .doneBtnActive{
+     position: absolute;
+   
+     right: 120px;
+  
+     background-color: black;
+     color: white;
+     padding: 6px 12px 6px 12px;
+     text-decoration: none;
+     display: inline-block;
+     border: none;
+     border-radius: 5px;
+     font-weight: bold;
+     font-size: 12pt;
+    font-family: 'Roboto', sans-serif;
+     
+   }
+   h4{
+    
+     font-family: 'Roboto', sans-serif;
+     color: black;
+     margin-top: 10px;
+   }
+
+
+::placeholder{
+  color: lightgray;
+}
+.hora{
+  
+  border: 1px solid lightgray;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+ 
+}
+.form-control{
+  
+  width: 300px;
+  height: auto;
+  
+}
+
+.text{
+  position: absolute;
+  top: 41%;
+  padding: 50px 0 50px 0;
+}
+.emptyVal{
+  background-color: lightcoral;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+
+  
+}
+
+}
+
