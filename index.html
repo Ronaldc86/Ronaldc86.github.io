@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="gridContainer">
+    
+    <div class="content1"> <div class="hamburger">
+       Add New Order</div><button class="btnTip" onclick="document.location ='tip.html'  " type="button">Calculate Tip</button>
+       
+       </div>
+       
+      <div class="content3">
+   
+ <div class="emptyVal" id="empty"></div>
+  
+ </div>
+ 
+    <div class="content2">
+    
+
+        
+       <ul >
+       
+  <h2>Take Order</h2>
+ <div class="containerForm"> 
+  <label for="table">Table N°</label>
+   <select name="table" id="table">
+     <option selected="Select"></option>
+     <option value="1">1</option>
+     <option value="2">2</option>
+     <option value="3">3</option>
+     <option value="4">4</option>
+     <option value="5">5</option>
+     <option value="6">6</option>
+     <option value="7">7</option>
+     <option value="8">8</option>
+     <option value="9">9</option>
+     <option value="10">10</option>
+     <option value="11">11</option>
+     <option value="12">12</option>
+     <option value="13">13</option>
+     <option value="14">14</option>
+     <option value="15">15</option>
+   </select>
+
+    <label for="priority">Priority</label>
+    <select name="priority" id="priority">
+      <option selected="select"></option>
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select>
+ <input class="hora" type="hidden" name="" id="date" value="" />
+   
+    <label for="subject">Order</label>
+    <textarea id="textArea" name="subject" placeholder="Write your order" style="height:200px "></textarea>
+
+    <button class="btn" id="btn" type="button">Get Order</button>
+
+ 
+  </ul>
+  </div>
+
+    </div>
+    
+
+   <div class="results">
+        <div class="myul" id="myUL"></div>
+        
+   </div>
+
+  
+    
+   
+    
+  </div>
+  
+  
+<script src="main.js"></script>
+  <script>
+  
+  </script>
+  </body>
+</html>

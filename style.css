@@ -1,0 +1,641 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body,html {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+    
+  background-image: url("Images/Being.jpg");
+  width: 100%;
+  height:  100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  
+}
+  .gridContainer {
+  display: grid;
+  grid-template-rows: 0.1fr  ;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+  grid-template-areas: 'content1 content1 content1 content1 content1 content1'
+  'content3 content3 content3 content3 content3 content3'
+  'results results results results results results'
+   'content2 content2 content2 content2 content2 content2'
+  ;
+}
+.content1{
+  grid-area: content1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+ 
+  
+  
+}
+.content2{
+  grid-area: content2;
+  padding: 10px 100px 10px 100px;
+  
+ 
+  
+  
+}
+.results{
+  grid-area: results;
+  padding: 0 100px 0 100px;
+}
+.content3{
+  grid-area: content3;
+ 
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+ 
+ 
+ 
+
+li {
+  list-style: none;
+  
+}
+
+
+
+ li {
+   
+  margin-left: 5rem;
+}
+/* desktop site*/
+
+ul {
+        position: absolute ;
+        left: -100%;
+        top: 7%;
+        color: black;
+        background-color: white;
+        width: 57%;
+        height: 50%;
+        padding: 50px 20px 50px 20px;
+        
+        border-radius: 7px;
+        text-align: center;
+        transition: 0.3s;
+        flex-direction: column;
+        z-index: 10;
+        
+        
+        
+    }
+   
+
+ul.active {
+  left: 0; 
+}
+
+button.active {
+  left: 0; 
+}
+.emptyVal.active {
+  left: 0; 
+}
+
+.myLi{
+
+  width:100%;
+  padding: 20px 20px 55px 20px;
+  
+  margin: 20px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+ color: white;
+ border: none ;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+    
+  
+  }
+ 
+ 
+
+.hamburger {
+  
+
+   cursor: pointer;
+   text-align: center;
+   background-color: red;
+   color: white;
+   border-radius: 4px;
+   padding: 20px 0 20px 0;
+   margin-top: 20px;
+   font-weight: bold;
+   font-size: 20pt;
+   width: 300px;
+   height: 70px;
+   
+   
+   }
+   .btnTip{
+   cursor: pointer;
+   display: block;
+   background-color: seagreen;
+   color: white;
+   border: none;
+   border-radius: 4px;
+   padding: 20px 0 20px 0;
+   margin-top: 20px;
+   font-weight: bold;
+   font-size: 20pt;
+   width: 300px;
+   height: 70px;
+   text-align: center;
+   
+     
+   }
+    .btnTip:hover {
+      background-color: black;
+    }
+   .btn {
+    
+     cursor: pointer;
+     border: none;
+     border-radius: 5px;
+     background-color: black;
+     color: white;
+     padding: 16px 35px;
+     margin-bottom: 20px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-size: 16pt;
+    
+   }
+   .hamburger1 {
+     display: block;
+     cursor: pointer;
+   
+   }
+   .btnClose{
+    position: absolute;
+   
+     right: 120px;
+  
+     background-color: #3AA3F2;
+     color: white;
+     padding: 6px 16px 6px 16px;
+     text-decoration: none;
+     display: inline-block;
+     border: none;
+     border-radius: 5px;
+     font-weight: bold;
+     font-size: 10pt;
+    font-family: Arial, Helvetica, sans-serif
+    
+   }
+     .doneBtnActive{
+     position: absolute;
+     right: 200px;
+     background-color: black;
+     color: white;
+     padding: 6px 16px 6px 16px;
+     text-decoration: none;
+     display: inline-block;
+     border: none;
+     border-radius: 5px;
+     font-weight: bold;
+     font-size: 10pt;
+    font-family: Arial, Helvetica, sans-serif;
+     
+   }
+   h2{
+    
+     
+     color: black;
+     margin-top: 10px;
+     padding-bottom: 20px;
+     font-family: Arial, Helvetica, sans-serif
+   }
+
+
+::placeholder{
+  color: lightgray;
+}
+
+
+.text{
+  position: absolute;
+  top: 44%;
+  padding: 50px 0 50px 0;
+}
+.emptyVal{
+  background-color: white;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24pt;
+  border-radius: 5px;
+  margin-top: 40px;
+  padding: 0 10px 0 10px;
+  width: 50%;
+  
+  
+}
+.containerForm{
+  border-radius: 8px;
+  background-color: gray;
+  padding: 20px;
+  color: white;
+  
+  
+  
+}
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 2px solid black; /* Gray border */
+  background-color: white;
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 26px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+/* Style inside results */
+.table{
+  background-color: white;
+  border-radius: 7px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16pt;
+  padding: 5px 5px 5px 5px;
+  width: 150px;
+  text-align: center;
+  margin-bottom: 15px;
+  
+}
+.time{
+  background-color: white;
+  border-radius: 7px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 12pt;
+  padding: 5px 5px 5px 5px;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.priority{
+  background-color: white;
+  border-radius: 7px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 12pt;
+  padding: 5px 5px 5px 5px;
+  width: 150px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.textArea{
+  background-color: white;
+  border-radius: 7px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+  padding: 10px 10px 10px 10px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.order{
+  background-color: white;
+  border-radius: 7px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 12pt;
+  padding: 5px 5px 5px 5px;
+  width: 150px;
+  text-align: center;
+  margin-bottom: 15px;
+  
+}
+
+
+
+ 
+@media only screen and (max-width: 600px) {
+  
+  .gridContainer {
+  display: grid;
+  grid-template-rows: 0.1fr  ;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+  grid-template-areas: 'content1 content1 content1 content1 content1 content1'
+  'content3 content3 content3 content3 content3 content3'
+  'results results results results results results'
+   'content2 content2 content2 content2 content2 content2'
+  ;
+
+ 
+ 
+
+}
+.test{
+  background-color: darkgrey;
+  color: white;
+  
+}
+
+.content1{
+  grid-area: content1;
+  display: flex;
+  flex-direction: column;
+}
+.content2{
+  grid-area: content2;
+  
+  
+  
+  }
+.results{
+  grid-area: results;
+  padding: 0 10px 0 10px;
+}
+.content3{
+  grid-area: content3;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+ }
+
+ 
+    ul {
+        position: absolute;
+        left: -100%;
+        top: 0;
+        color: black;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        border-radius: 7px;
+        text-align: center;
+        transition: 0.3s;
+        flex-direction: column;
+        z-index: 10;
+        
+        
+        
+    }
+   
+
+ul.active {
+  left: 0; 
+}
+
+button.active {
+  left: 0; 
+}
+.emptyVal.active {
+  left: 0; 
+}
+
+.myLi{
+
+  width:100%;
+  display: inline-block;
+  margin: 5px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+ color: white;
+ border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  }
+ 
+ 
+
+.hamburger {
+  
+
+   cursor: pointer;
+   text-align: center;
+   background-color: red;
+   color: white;
+   border-radius: 7px;
+   padding: 20px 0 10px 0;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   font-size: 16pt;
+   font-weight: bold;
+   width: 300px;
+   height: 60px;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+   
+   
+   }
+  
+   .btnTip{
+   cursor: pointer;
+   text-align: center;
+   display: block;
+   background-color: seagreen;
+   color: white;
+   border: none;
+   border-radius: 7px;
+   padding: 10px 0 10px 0;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-weight: bold;
+   font-size: 16pt;
+   width: 300px;
+   height: 60px;
+   margin-bottom: 20px;
+   
+   
+   
+   
+     
+   }
+   .btnTip:hover{
+     background-color: black;
+   }
+   .btn {
+    
+     cursor: pointer;
+     border: none;
+     border-radius: 5px;
+     background-color: black;
+     color: white;
+     padding: 16px 35px;
+     margin-bottom: 20px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-size: 16pt;
+    
+   }
+   .hamburger1 {
+     display: block;
+     cursor: pointer;
+   
+   }
+   .btnClose{
+    position: absolute;
+   
+     right: 30px;
+  
+     background-color: #3AA3F2;
+     color: white;
+     padding: 6px 16px 6px 16px;
+     text-decoration: none;
+     display: inline-block;
+     border: none;
+     border-radius: 5px;
+     font-weight: bold;
+     font-size: 10pt;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+    
+   }
+   .doneBtnActive{
+     position: absolute;
+     right: 120px;
+     background-color: black;
+     color: white;
+     padding: 6px 16px 6px 16px;
+     text-decoration: none;
+     display: inline-block;
+     border: none;
+     border-radius: 5px;
+     font-weight: bold;
+     font-size: 10pt;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     
+   }
+   h2{
+    
+   
+     color: black;
+     margin-top: 20px;
+     margin-bottom: 16px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }
+
+
+::placeholder{
+  color: lightgray;
+}
+
+
+
+.text{
+  position: absolute;
+  top: 41%;
+  padding: 50px 0 50px 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.emptyVal{
+  background-color: white;
+  color: black;
+  font-size: 20pt;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+  width: 80%;
+  margin-bottom: 10px;
+
+  
+}
+
+.containerForm{
+  border-radius: 8px;
+  background-color: gray;
+  padding: 20px;
+  color: white;
+  
+  
+}
+input[type=text], select, textarea{
+  
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: none; /* Gray border */
+  
+  background-color: white;
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 26px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* Style inside results */
+.table{
+  background-color: white;
+  border-radius: 7px;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 16pt;
+  padding: 5px 5px 5px 5px;
+  width: 150px;
+  text-align: center;
+  margin-bottom: 15px;
+  
+}
+.time{
+  background-color: white;
+  border-radius: 7px;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 12pt;
+  padding: 5px 5px 5px 5px;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.priority{
+  background-color: white;
+  border-radius: 7px;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 12pt;
+  padding: 5px 5px 5px 5px;
+  width: 150px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.textArea{
+  background-color: white;
+  border-radius: 7px;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12pt;
+  padding: 10px 10px 10px 10px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.order{
+  background-color: white;
+  border-radius: 7px;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 12pt;
+  padding: 5px 5px 5px 5px;
+  width: 150px;
+  text-align: center;
+  margin-bottom: 15px;
+  
+}
+
+}
+

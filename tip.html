@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+  <!-- Custom Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tip.css">
+</head>
+<body>
+  <div class="container">
+    
+ <div class="content1"><button onclick="document.location ='index.html'  " class="home" type="button">Home</button></div> 
+ 
+ <div class="content2"> 
+ <input type="range" min="1" max="1000" value="50" class="slider" id="total"><input type="range" min="1" max="25" value="5" class="slider1" id="percentage"><select class="form-select" aria-label="Default select example" id="people">
+   <option value>N° of people</option>
+   <option value="1">1</option>
+   <option value="2">2</option>
+   <option value="3">3</option>
+   <option value="4">4</option>
+   <option value="5">5</option>
+   <option value="6">6</option>
+   <option value="7">7</option>
+   <option value="8">8</option>
+   <option value="9">9</option>
+   <option value="10">10</option>
+ </select></div>
+ 
+ 
+ <div class="content3">
+  
+   <div class="demo" id="demo"></div>
+  
+   <div class="demo1" id="demo1"></div>
+   </div>
+   
+   <div class="mid">
+      <div class="symbol">$</div>
+       <div class="symbol1">%</div>
+   </div>
+ 
+
+<div class="content4">
+  <button class="btn1" onclick="calculateTip()" type="submit">Calculate</button>
+  <div class="validation" id="validation"></div>
+<div class="result" id="result"></div>
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+  <script>
+   function calculateTip(){
+   let y = document.getElementById('result');
+   let x = document.getElementById ('total').value;
+   let people = document.getElementById('people').value;
+   let tip = document.getElementById('percentage').value;
+   let validation = document.getElementById('validation').value;
+   document.getElementById('people').style.borderColor = '';
+   document.getElementById('people').value = '';
+   document.getElementById('validation').innerHTML = '';
+   if(people === ''){
+     document.getElementById('people').style.borderColor = "red";
+   document.getElementById('validation').innerHTML = 'N° of people required.'
+   }else{
+       y.innerHTML = `Your tip will be: $ ${x*tip/100/people}
+       `
+       
+   }
+  
+    }
+    
+ var slider = document.getElementById("total");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; 
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+
+var slider1 = document.getElementById("percentage");
+var output1 = document.getElementById("demo1");
+output1.innerHTML = slider1.value; 
+slider1.oninput = function() {
+  output1.innerHTML = this.value;
+}
+
+    
+  </script>
+  
+  
+  <script src="main.js"></script>
+</body>
+</html>
